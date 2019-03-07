@@ -18,11 +18,18 @@ namespace BouncingBallChallenge
         * Note: The ball can only be seen if the height of the rebounding ball is stricty greater than the win parameter. IE: rebounding h > win
 
          */
+
+        private bool isValidExperiment(double height, double bounceRate)
+        {
+            return height > 0 && bounceRate > 0 && bounceRate < 1;
+
+        }
         public int bouncingBall(double height, double bounceRate, double window)
         {
             // ballSeen is -1 if any of the inputs are not valid 
             int ballSeen = -1;
-            if(height > 0 && bounceRate > 0 && bounceRate < 1)
+
+            if(isValidExperiment(height, bounceRate))
             {
                 while(height > window)
                 {
