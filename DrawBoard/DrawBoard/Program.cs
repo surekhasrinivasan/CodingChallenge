@@ -28,7 +28,10 @@ namespace DrawBoard
             DrawDynamicBoard.DrawBoard1(r, c);
 
             Console.WriteLine("DrawBoard2 Pattern: ");
-            DrawDynamicBoard.DrawBoard2(r, c);            
+            DrawDynamicBoard.DrawBoard2(r, c);
+
+            Console.WriteLine("DrawBoard3 Pattern: ");
+            DrawDynamicBoard.DrawBoard3(r, c);
         }
     }
 }
