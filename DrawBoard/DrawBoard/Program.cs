@@ -24,7 +24,7 @@ namespace DrawBoard
             Console.WriteLine("Enter the number of columns: ");
             int c = Convert.ToInt32(Console.ReadLine());
 
-            DrawDynamicBoard.drawBoard(r, c);
+            DrawDynamicBoard.DrawBoard1(r, c);            
         }
     }
 }
