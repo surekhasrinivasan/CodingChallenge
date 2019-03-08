@@ -18,7 +18,13 @@ namespace DrawBoard
     {
         static void Main(string[] args)
         {
-           
+            Console.WriteLine("Enter the number of rows: ");
+            int r = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the number of columns: ");
+            int c = Convert.ToInt32(Console.ReadLine());
+
+            DrawDynamicBoard.drawBoard(r, c);
         }
     }
 }

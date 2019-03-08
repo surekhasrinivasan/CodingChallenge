@@ -8,6 +8,9 @@ namespace DrawBoard
 {
     class DrawDynamicBoard
     {
-        
+        public static void drawBoard(int rows, int columns)
+        {
+
+        }
     }
 }
