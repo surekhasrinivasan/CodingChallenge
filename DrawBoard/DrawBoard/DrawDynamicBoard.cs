@@ -8,7 +8,7 @@ namespace DrawBoard
 {
     class DrawDynamicBoard
     {
-        public static bool isNotValid(int rows, int columns)
+        private static bool isNotValid(int rows, int columns)
         {
             return rows < 2 || rows > 30 || columns < 2 || columns > 30;
         }
