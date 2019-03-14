@@ -18,7 +18,18 @@ namespace CenturyFromYear
     {
         public static int CenturyFromYear(int year)
         {
-
+            if (year >= 1 && year <= 2005)
+            {
+                if (year % 100 == 0)
+                {
+                    year = year / 100;
+                }
+                else
+                {
+                    year = year / 100 + 1;
+                }
+            }
+            return year;
         }
 
             static void Main(string[] args)
