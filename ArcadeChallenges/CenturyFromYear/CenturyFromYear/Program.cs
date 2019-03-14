@@ -16,10 +16,17 @@ namespace CenturyFromYear
      */
     class Program
     {
-       
-        static void Main(string[] args)
+        public static int CenturyFromYear(int year)
         {
-            
+
+        }
+
+            static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a year: ");
+            int year = Convert.ToInt32(Console.ReadLine());
+            var result = CenturyFromYear(year);
+            Console.WriteLine(result);
         }
     }
 }
