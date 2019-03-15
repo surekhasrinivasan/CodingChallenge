@@ -13,32 +13,58 @@ namespace LinkedListChallenge
         public ListNode<T> next { get; set; }
     
     public static ListNode<int> removeKFromList(ListNode<int> l, int k)
-        {
-            // if the list is emp
+    {
+            //// if the list is emp
+            //if (l == null)
+            //    return l;
+            //else if (l.value == k)
+            //{
+            //    l = l.next;
+            //}
+
+            //// temproray ListNode variable traverse through the list
+            //ListNode<int> temp = l;
+
+            //while (temp != null && temp.next != null)
+            //{
+            //    if (temp.next.value == k)
+            //    {
+            //        temp.next = temp.next.next;
+            //    }
+            //    else
+            //    {
+            //        temp = temp.next;
+            //    }
+            //}
+            //if (temp != null && temp.value == k)
+            //{
+            //    l = l.next;
+            //}
+            //return l;
+
+            // 2nd Method
             if (l == null)
+            {
                 return l;
-            else if (l.value == k)
+            }
+            while (l.value == k)
             {
+                if (l.next == null)
+                {
+                    return l.next;
+                }
                 l = l.next;
             }
 
-            // temproray ListNode variable traverse through the list
-            ListNode<int> temp = l;
-
-            while (temp != null && temp.next != null)
+            ListNode<int> trav = l;
+            while (trav.next != null)
             {
-                if (temp.next.value == k)
+                if (trav.next.value == k)
                 {
-                    temp.next = temp.next.next;
+                    trav.next = trav.next.next;
+                    continue;
                 }
-                else
-                {
-                    temp = temp.next;
-                }
-            }
-            if (temp != null && temp.value == k)
-            {
-                l = l.next;
+                trav = trav.next;
             }
             return l;
         }
