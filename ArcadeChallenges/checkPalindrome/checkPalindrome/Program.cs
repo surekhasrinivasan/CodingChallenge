@@ -19,9 +19,27 @@ namespace checkPalindrome
      */
     class Program
     {
+        public static bool CheckPalindrome(string inputString)
+        {
+            var strArray = inputString.ToCharArray();
+            Array.Reverse(strArray);
+            if (inputString.Equals(new string(strArray)))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         static void Main(string[] args)
         {
-
+            Console.WriteLine(CheckPalindrome("aabaa"));
+            Console.WriteLine(CheckPalindrome("abac"));
+            Console.WriteLine(CheckPalindrome("kayak"));
+            Console.WriteLine(CheckPalindrome("a"));
+            Console.WriteLine(CheckPalindrome("abacab"));
         }
     }
 }
