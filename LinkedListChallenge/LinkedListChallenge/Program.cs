@@ -43,31 +43,44 @@ namespace LinkedListChallenge
             //return l;
 
             // 2nd Method
+            //if (l == null)
+            //{
+            //    return l;
+            //}
+            //while (l.value == k)
+            //{
+            //    if (l.next == null)
+            //    {
+            //        return l.next;
+            //    }
+            //    l = l.next;
+            //}
+
+            //ListNode<int> trav = l;
+            //while (trav.next != null)
+            //{
+            //    if (trav.next.value == k)
+            //    {
+            //        trav.next = trav.next.next;
+            //        continue;
+            //    }
+            //    trav = trav.next;
+            //}
+            //return l;
+
+            // 3rd method - recursive
             if (l == null)
             {
                 return l;
             }
-            while (l.value == k)
+            l.next = removeKFromList(l.next, k);
+            if (l.value == k)
             {
-                if (l.next == null)
-                {
-                    return l.next;
-                }
-                l = l.next;
-            }
-
-            ListNode<int> trav = l;
-            while (trav.next != null)
-            {
-                if (trav.next.value == k)
-                {
-                    trav.next = trav.next.next;
-                    continue;
-                }
-                trav = trav.next;
+                return l.next;
             }
             return l;
         }
+    
     }      
 
     
