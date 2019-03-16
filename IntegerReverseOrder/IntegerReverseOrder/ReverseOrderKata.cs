@@ -14,8 +14,8 @@ namespace IntegerReverseOrder
 
             while (num > 0)
             {
-                int remainder = num % 10;
-                reverse = (reverse * 10) + remainder;
+                //int remainder = num % 10;
+                reverse = (reverse * 10) + num % 10;
                 num = num / 10;
             }
             return reverse;
