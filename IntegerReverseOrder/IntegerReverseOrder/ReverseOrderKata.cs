@@ -11,7 +11,19 @@ namespace IntegerReverseOrder
         public static int ReversedOrder(int num)
         {
             // write the code here
-            return 0;
+            int reverse = 0;
+
+            while (num > 0)
+            {
+                int remainder = num % 10;
+                Console.WriteLine("remainder: " + remainder);
+                reverse = (reverse * 10) + remainder;
+                Console.WriteLine("reverse: " +reverse);
+                num = num / 10;
+                Console.WriteLine("num: " +num);
+            }
+
+            return reverse;
         }
     }
 }
