@@ -16,6 +16,11 @@ namespace IntegerReverseOrder
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter the number to be reversed: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            int result = ReverseOrderKata.ReversedOrder(num);
+            Console.WriteLine("Reversed number is :  {0}", result);
         }
     }
 }
