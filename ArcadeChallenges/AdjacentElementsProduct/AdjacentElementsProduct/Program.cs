@@ -19,8 +19,19 @@ namespace AdjacentElementsProduct
     {
         static void Main(string[] args)
         {
-            int[] inputarr = { -23, 4, -3, 8, -12 };
-            Console.WriteLine("The largest product is: {0}", AdjacentElementsProductKata.adjacentElementsProduct(inputarr));
+            //int[] inputarr = { -23, 4, -3, 8, -12 };
+            //Console.WriteLine("The largest product is: {0}", AdjacentElementsProductKata.adjacentElementsProduct(inputarr));
+
+            Console.WriteLine("Enter the numbers of the array: ");
+
+            int[] inputarr1 = new int[6];
+            for (int i = 0; i < 6; i++)
+            {
+                inputarr1[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine(AdjacentElementsProductKata.adjacentElementsProduct(inputarr1));
+            Console.WriteLine();
         }
     }
 }
