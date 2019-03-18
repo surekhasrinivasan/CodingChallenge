@@ -15,6 +15,8 @@ namespace AdjacentElementsProduct
     {
         static void Main(string[] args)
         {
+            int[] inputarr = { 2, 3, 4, 5, 3, 4 };
+            Console.WriteLine("The largest product is: {0}", AdjacentElementsProductKata.adjacentElementsProduct(inputarr));
         }
     }
 }
