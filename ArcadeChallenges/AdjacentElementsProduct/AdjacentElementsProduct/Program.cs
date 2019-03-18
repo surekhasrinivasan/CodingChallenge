@@ -10,12 +10,16 @@ namespace AdjacentElementsProduct
      * Example
      * For inputArray = [3, 6, -2, -5, 7, 3], the output should be adjacentElementsProduct(inputArray) = 21.
      * 7 and 3 produce the largest product.
+     * An array of integers containing at least two elements.
+     * Guaranteed constraints:
+     * 2 ≤ inputArray.length ≤ 10,
+     * -1000 ≤ inputArray[i] ≤ 1000.
      */
     class Program
     {
         static void Main(string[] args)
         {
-            int[] inputarr = { 2, 3, 4, 5, 3, 4 };
+            int[] inputarr = { -23, 4, -3, 8, -12 };
             Console.WriteLine("The largest product is: {0}", AdjacentElementsProductKata.adjacentElementsProduct(inputarr));
         }
     }

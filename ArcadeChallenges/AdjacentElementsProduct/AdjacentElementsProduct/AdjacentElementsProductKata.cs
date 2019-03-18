@@ -10,8 +10,8 @@ namespace AdjacentElementsProduct
     {
         public static int adjacentElementsProduct(int[] inputArray)
         {
-            // Code here 
-            int result = 0;
+            // Check for negative testcases
+            int result = -1000;
 
             for(int i = 0; i < inputArray.Length-1; i++)
             {
