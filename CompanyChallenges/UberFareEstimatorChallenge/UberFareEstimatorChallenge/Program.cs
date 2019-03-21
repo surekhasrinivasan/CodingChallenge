@@ -29,6 +29,14 @@ namespace UberFareEstimatorChallenge
     {
         static void Main(string[] args)
         {
+            int ride_time = 30;
+            int ride_distance = 7;
+            double[] cost_per_minute = { 0.2, 0.35, 0.4, 0.45 };
+            double[] cost_per_mile = {1.1, 1.8, 2.3, 3.5};
+
+            double[] output = new double[] { };
+            output = UberFareEstimator.fareEstimator(ride_time, ride_distance, cost_per_minute, cost_per_mile);
+            Console.WriteLine();
         }
     }
 }
