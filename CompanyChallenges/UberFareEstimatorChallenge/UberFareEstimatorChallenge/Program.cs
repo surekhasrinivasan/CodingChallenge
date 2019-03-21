@@ -29,14 +29,55 @@ namespace UberFareEstimatorChallenge
     {
         static void Main(string[] args)
         {
-            int ride_time = 30;
-            int ride_distance = 7;
-            double[] cost_per_minute = { 0.2, 0.35, 0.4, 0.45 };
-            double[] cost_per_mile = {1.1, 1.8, 2.3, 3.5};
+            UberFareEstimator carType1 = new UberFareEstimator();
+            UberFareEstimator carType2 = new UberFareEstimator();
+            UberFareEstimator carType3 = new UberFareEstimator();
+            UberFareEstimator carType4 = new UberFareEstimator();
 
-            double[] output = new double[] { };
-            output = UberFareEstimator.fareEstimator(ride_time, ride_distance, cost_per_minute, cost_per_mile);
+            carType1.setRideTime(30);
+            carType1.setRideDistance(7);
+            carType1.setCostPerMin(0.2);
+            carType1.setCostPerMile(1.1);
+
+            carType2.setRideTime(30);
+            carType2.setRideDistance(7);
+            carType2.setCostPerMin(0.35);
+            carType2.setCostPerMile(1.8);
+
+            carType3.setRideTime(30);
+            carType3.setRideDistance(7);
+            carType3.setCostPerMin(0.4);
+            carType3.setCostPerMile(2.3);
+
+            carType4.setRideTime(30);
+            carType4.setRideDistance(7);
+            carType4.setCostPerMin(0.45);
+            carType4.setCostPerMile(3.5);
+
+            Console.WriteLine("The total cost for the ride is: {0}", carType1.fareEstimator());
+            Console.WriteLine("The total cost for the ride is: {0}", carType2.fareEstimator());
+            Console.WriteLine("The total cost for the ride is: {0}", carType3.fareEstimator());
+            Console.WriteLine("The total cost for the ride is: {0}", carType4.fareEstimator());
             Console.WriteLine();
+
+            double[] output = { carType1.fareEstimator(), carType2.fareEstimator(), carType3.fareEstimator(), carType4.fareEstimator() };
+
+            for(int i = 0; i < output.Length; i++)
+            {
+                Console.Write(output[i] + " ");
+            }
+            Console.WriteLine();
+
+            
+            // Method 1
+            //int ride_time = 30;
+            //int ride_distance = 7;
+            //double[] cost_per_minute = { 0.2, 0.35, 0.4, 0.45 };
+            //double[] cost_per_mile = {1.1, 1.8, 2.3, 3.5};
+
+            //double[] output = new double[] { };
+            //output = UberFareEstimator.fareEstimator(ride_time, ride_distance, cost_per_minute, cost_per_mile);
+            //Console.WriteLine();
         }
     }
 }
