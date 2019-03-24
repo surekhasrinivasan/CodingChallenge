@@ -15,9 +15,22 @@ namespace InstaCartChallenge
      * delivery(order, shoppers) = [false, true].
      */
     class Program
-    {
+    { 
         static void Main(string[] args)
         {
+            int[] order = { 200, 20, 15 };
+            int[][] shoppers = {
+                new int[]{ 300, 40, 5 }, 
+                new int[]{ 600, 40, 10 }
+            };
+
+            bool[] orderStatus = OrderDelivery.Delivery(order, shoppers);
+
+            for(int i = 0; i < orderStatus.Length; i++)
+            {
+                Console.Write(orderStatus[i] + " ");
+            }
+            Console.WriteLine();
         }
     }
 }
