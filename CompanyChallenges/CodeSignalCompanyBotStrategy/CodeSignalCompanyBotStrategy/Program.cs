@@ -36,8 +36,24 @@ namespace CodeSignalCompanyBotStrategy
      */
     class Program
     {
+        public static double CompanyBotStrategy(int[][] trainingData)
+        {
+            double result = 0;
+            return result;
+        }
+
         static void Main(string[] args)
         {
+            // Testcases
+            int[][] trainingData = {
+                new int[]{ 3, 1 },
+                new int[]{ 6, 1 },
+                new int[]{ 4, 1 },
+                new int[]{ 5, 1 } };            
+
+            double result = CompanyBotStrategy(trainingData);
+            Console.WriteLine(result);
+            
         }
     }
 }
