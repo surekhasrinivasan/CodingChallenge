@@ -72,7 +72,23 @@ namespace CodeSignalCompanyBotStrategy
 
             double result = CompanyBotStrategy(trainingData);
             Console.WriteLine(result);
+
+            int[][] trainingData2 = {
+                new int[] {4, 1 },
+                new int[] {4, -1 },
+                new int[] {0, 0 },
+                new int[] {6, 1 } };
+
+            double result2 = CompanyBotStrategy(trainingData2);
+            Console.WriteLine(result2);
+
+            int[][] trainingData3 = {
+                new int[]{4, -1 },
+                new int[]{0, 0 },
+                new int[]{5, -1 } };
             
+            double result3 = CompanyBotStrategy(trainingData3);
+            Console.WriteLine(result3);
         }
     }
 }
