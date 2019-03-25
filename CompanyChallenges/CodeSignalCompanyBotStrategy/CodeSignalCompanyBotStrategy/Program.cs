@@ -39,6 +39,25 @@ namespace CodeSignalCompanyBotStrategy
         public static double CompanyBotStrategy(int[][] trainingData)
         {
             double result = 0;
+            double sum = 0;
+
+            for (int i = 0; i < trainingData.Length; i++)
+            {
+                if (trainingData[i][1] == 1)
+                {
+                    result++;
+                    sum += trainingData[i][0];
+                }
+            }
+            if (result == 0)
+            {
+                result = 0;
+            }
+            else
+            {
+                result = sum / result;
+            }
+
             return result;
         }
 
