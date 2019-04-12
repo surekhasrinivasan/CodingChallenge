@@ -21,8 +21,15 @@ namespace CommonTechniquesBasicChallenge1
      */
     class Program
     {
+        public static bool containsDuplicates(int[] a)
+        {
+            
+        }
+
         static void Main(string[] args)
         {
+            int[] inputArray = { 1, 2, 3, 1 };
+            Console.WriteLine("The input array contains Duplicates: {0}", containsDuplicates(inputArray));
         }
     }
 }
