@@ -23,13 +23,24 @@ namespace CommonTechniquesBasicChallenge1
     {
         public static bool containsDuplicates(int[] a)
         {
-            
+            Array.Sort(a);
+
+            for(int i = 0; i < a.Length - 1; i++)
+            {
+                if(a[i] == a[i + 1])
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         static void Main(string[] args)
         {
-            int[] inputArray = { 1, 2, 3, 1 };
+            int[] inputArray = { 1, 2, 3, 4 };
+            int[] inputArr2 = { 1, 2, 3, 4, 3, 5, 4 };
             Console.WriteLine("The input array contains Duplicates: {0}", containsDuplicates(inputArray));
+            Console.WriteLine("The input array contains Duplicates: {0}", containsDuplicates(inputArr2));
         }
     }
 }
