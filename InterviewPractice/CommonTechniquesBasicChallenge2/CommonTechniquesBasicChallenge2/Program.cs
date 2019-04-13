@@ -36,7 +36,12 @@ namespace CommonTechniquesBasicChallenge2
             int[] b = { 10, 20, 30, 40 };
             int v = 42;
 
+            int[] c = { 1, 4, 3, 6, 10, 1, 0, 1, 6, 5 };
+            int[] d = { 9, 5, 6, 9, 0, 1, 2, 1, 6, 10 };
+            int e = 8;
+
             Console.WriteLine(sumOfTwo(a, b, v));
+            Console.WriteLine(sumOfTwo(c, d, e));
         }
     }
 }
