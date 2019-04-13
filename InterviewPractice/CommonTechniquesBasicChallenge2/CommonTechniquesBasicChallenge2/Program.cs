@@ -18,8 +18,17 @@ namespace CommonTechniquesBasicChallenge2
      */
     class Program
     {
+        public static bool sumOfTwo(int[] a,int[] b, int v)
+        {
+            
+        }
         static void Main(string[] args)
         {
+            int[] a = { 1, 2, 3 };
+            int[] b = { 10, 20, 30, 40 };
+            int v = 42;
+
+            Console.WriteLine(sumOfTwo(a, b, v));
         }
     }
 }
