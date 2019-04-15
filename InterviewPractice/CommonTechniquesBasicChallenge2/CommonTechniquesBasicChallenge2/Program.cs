@@ -20,6 +20,9 @@ namespace CommonTechniquesBasicChallenge2
     {
         public static bool sumOfTwo(int[] a,int[] b, int v)
         {
+            Array.Sort(a);
+            Array.Sort(b);
+
             for(int i = 0; i < a.Length; i++)
             {
                 for(int j = 0; j < b.Length; j++)
